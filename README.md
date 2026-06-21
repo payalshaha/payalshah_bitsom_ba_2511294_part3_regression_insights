@@ -323,3 +323,225 @@ Footfall is a very strong predictor of monthly sales and appears substantially m
 ## Conclusion
 
 Among the simple regression models, Footfall is the strongest individual predictor of monthly sales because it has the highest R-squared value and a highly significant p-value. Marketing spend is also significant, but it explains much less variation in sales when analyzed alone.
+
+# Multiple Regression Model Interpretation
+
+## Model Overview
+
+**Dependent Variable:**
+
+* monthly_sales
+
+**Independent Variables:**
+
+* marketing_spend
+* footfall
+* inventory_availability_pct
+* customer_rating
+* North_Dummy
+* South_Dummy
+* West_Dummy
+
+---
+
+## Intercept
+
+The intercept coefficient is **80,972.67**.
+
+This represents the estimated monthly sales when all independent variables are equal to zero. Since stores do not realistically operate with zero marketing spend, zero footfall, and zero inventory availability, the intercept mainly serves as a mathematical starting point for the regression equation and has limited practical business interpretation.
+
+The intercept has a **p-value of 0.0979**, which is greater than 0.05, indicating that it is not statistically significant.
+
+---
+
+## R-Squared Interpretation
+
+The model produced an **R-squared value of 0.8144**.
+
+This means that approximately **81.44%** of the variation in monthly sales can be explained by the variables included in the model.
+
+The **Adjusted R-squared is 0.8102**, which is very close to the R-squared value, indicating that the model remains strong even after accounting for the number of predictors used.
+
+Overall, the model demonstrates strong explanatory power and provides a reliable framework for understanding sales performance.
+
+---
+
+## Coefficients and Direction of Relationship
+
+### Marketing Spend
+
+**Coefficient:** 1.2023
+
+**P-value:** 6.4896E-18
+
+**Direction:** Positive
+
+**Interpretation:**
+
+For every additional ₹1 spent on marketing, monthly sales are expected to increase by approximately ₹1.20, holding all other variables constant.
+
+**Business Meaning:**
+
+Marketing investment is strongly associated with higher sales. Stores that invest more in marketing generally achieve better sales performance.
+
+---
+
+### Footfall
+
+**Coefficient:** 33.9843
+
+**P-value:** 1.0011E-101
+
+**Direction:** Positive
+
+**Interpretation:**
+
+Each additional customer visit is associated with an increase of approximately ₹33.98 in monthly sales, holding all other variables constant.
+
+**Business Meaning:**
+
+Footfall is the strongest predictor in the model. Increasing customer traffic is likely to have a substantial impact on sales performance.
+
+---
+
+### Inventory Availability Percentage
+
+**Coefficient:** 2,886.7347
+
+**P-value:** 3.7620E-09
+
+**Direction:** Positive
+
+**Interpretation:**
+
+A one percentage-point increase in inventory availability is associated with an increase of approximately ₹2,886.73 in monthly sales.
+
+**Business Meaning:**
+
+Maintaining high inventory availability helps stores meet customer demand and avoid lost sales opportunities due to stock shortages.
+
+---
+
+### Customer Rating
+
+**Coefficient:** 11,024.9905
+
+**P-value:** 0.0265
+
+**Direction:** Positive
+
+**Interpretation:**
+
+A one-point increase in customer rating is associated with an increase of approximately ₹11,024.99 in monthly sales.
+
+**Business Meaning:**
+
+Higher customer satisfaction appears to contribute positively to sales performance through repeat purchases, stronger customer loyalty, and positive customer experiences.
+
+---
+
+## Dummy Variable Interpretation
+
+### Reference Category
+
+The **East region** was selected as the reference category.
+
+The coefficients of the dummy variables represent the difference in monthly sales compared with East region stores while holding all other variables constant.
+
+### North_Dummy
+
+**Coefficient:** 8,667.12
+
+**P-value:** 0.2349
+
+**Direction:** Positive
+
+**Interpretation:**
+
+North region stores are estimated to generate approximately ₹8,667 more monthly sales than East region stores.
+
+**Business Meaning:**
+
+Although the coefficient is positive, the p-value is greater than 0.05, meaning there is insufficient statistical evidence to conclude that North region stores perform differently from East region stores.
+
+---
+
+### South_Dummy
+
+**Coefficient:** 21,972.42
+
+**P-value:** 0.00298
+
+**Direction:** Positive
+
+**Interpretation:**
+
+South region stores are estimated to generate approximately ₹21,972 more monthly sales than East region stores.
+
+**Business Meaning:**
+
+The South region shows a statistically significant positive association with sales, suggesting that stores in this region generally outperform those in the East region.
+
+---
+
+### West_Dummy
+
+**Coefficient:** 17,042.83
+
+**P-value:** 0.00936
+
+**Direction:** Positive
+
+**Interpretation:**
+
+West region stores are estimated to generate approximately ₹17,043 more monthly sales than East region stores.
+
+**Business Meaning:**
+
+The West region also demonstrates significantly higher sales performance compared with the East region.
+
+---
+
+## P-Value Interpretation
+
+Variables with p-values less than 0.05 are considered statistically significant.
+
+### Statistically Significant Variables
+
+* marketing_spend
+* footfall
+* inventory_availability_pct
+* customer_rating
+* South_Dummy
+* West_Dummy
+
+These variables provide strong evidence of association with monthly sales.
+
+---
+
+## Statistically Weak Variables
+
+* North_Dummy
+* Intercept
+
+These variables have p-values greater than 0.05 and therefore provide limited statistical evidence of association with monthly sales after controlling for other variables.
+
+They should be interpreted cautiously and should not be heavily relied upon for business decision-making.
+
+---
+
+## Overall Business Conclusion
+
+The multiple regression model explains approximately **81.44% of the variation in monthly sales**, making it substantially stronger than the simple regression models.
+
+The most influential and statistically significant factors associated with higher monthly sales are:
+
+1. Footfall (strongest predictor)
+2. Inventory Availability
+3. Customer Rating
+4. Marketing Spend
+5. South Region
+6. West Region
+
+Based on the regression evidence, leadership should prioritize initiatives that increase customer traffic, maintain high inventory availability, improve customer experience, and optimize marketing investments. Regional performance differences suggest that practices used in South and West stores may provide valuable insights that could be replicated in other regions.
+
