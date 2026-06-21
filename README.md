@@ -226,3 +226,100 @@ Dummy variables allow categorical information to be included in the regression m
 
 The dummy variables were included in the multiple regression model along with numerical predictors such as marketing spend, footfall, inventory availability, and customer rating.
 
+# Regression Approach
+
+# Simple Regression Model 1
+
+## Model Name
+
+Monthly Sales vs Marketing Spend
+
+### Dependent Variable (Y)
+
+monthly_sales
+
+### Independent Variable (X)
+
+marketing_spend
+
+## Regression Equation
+
+Monthly Sales = 560,777.35 + 2.13 × Marketing Spend
+
+## Results
+
+| Metric      | Value    |
+| ----------- | -------- |
+| R-Squared   | 0.167    |
+| Coefficient | 2.130    |
+| P-Value     | 2.48E-14 |
+
+## Business Interpretation
+
+The coefficient of 2.13 indicates that for every additional ₹1 spent on marketing, monthly sales are associated with an increase of approximately ₹2.13, on average.
+
+The p-value is significantly below 0.05, indicating that marketing spend is statistically significant.
+
+However, the R-squared value of 0.167 suggests that marketing spend alone explains only about 16.7% of the variation in monthly sales.
+
+## Is the Variable Useful?
+
+Yes.
+
+Marketing spend appears to be statistically significant and positively associated with sales. However, it does not explain sales performance very well by itself and should be combined with other variables in a multiple regression model.
+
+---
+
+# Simple Regression Model 2
+
+## Model Name
+
+Monthly Sales vs Footfall
+
+### Dependent Variable (Y)
+
+monthly_sales
+
+### Independent Variable (X)
+
+footfall
+
+## Regression Equation
+
+Monthly Sales = 446,410.58 + 35.68 × Footfall
+
+## Results
+
+| Metric      | Value    |
+| ----------- | -------- |
+| R-Squared   | 0.736    |
+| Coefficient | 35.678   |
+| P-Value     | 4.75E-94 |
+
+## Business Interpretation
+
+The coefficient of 35.68 indicates that each additional customer visit is associated with an increase of approximately ₹35.68 in monthly sales.
+
+The p-value is extremely small and well below 0.05, indicating very strong statistical significance.
+
+The R-squared value of 0.736 means that footfall alone explains approximately 73.6% of the variation in monthly sales.
+
+## Is the Variable Useful?
+
+Yes.
+
+Footfall is a very strong predictor of monthly sales and appears substantially more useful than marketing spend when used individually. Increasing customer traffic is likely to have a meaningful association with higher sales performance.
+
+---
+
+# Comparison of Simple Regression Models
+
+| Model             | R-Squared | Coefficient | P-Value     | Useful? |
+| ----------------- | --------- | ----------- | ----------- | ------- |
+| Marketing Spend   | 0.167     | 2.130       | 2.48E-14    | Yes     |
+| Footfall          | 0.736     | 35.678      | 4.75E-94    | Yes     |
+| Best Simple Model | Footfall  | Highest     | Significant | Yes     |
+
+## Conclusion
+
+Among the simple regression models, Footfall is the strongest individual predictor of monthly sales because it has the highest R-squared value and a highly significant p-value. Marketing spend is also significant, but it explains much less variation in sales when analyzed alone.
