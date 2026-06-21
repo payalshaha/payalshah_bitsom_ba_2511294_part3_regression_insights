@@ -6,6 +6,39 @@ The objective of this analysis is to identify the factors that are most strongly
 
 ---
 
+## Business Problem Summary
+
+The leadership team of a retail chain wants to understand which business factors are most strongly associated with monthly sales performance across stores. The goal is to use regression analysis to identify key sales drivers and support decisions related to marketing investment, inventory management, discount strategies, staffing allocation, and store operations.
+
+This project applies simple and multiple linear regression models to evaluate relationships between monthly sales and various business variables.
+
+---
+
+# Dataset Description
+
+The dataset contains monthly store-level performance data for a retail chain.
+
+The data includes information related to:
+
+* Monthly sales
+* Marketing spend
+* Customer footfall
+* Discount levels
+* Staff count
+* Inventory availability
+* Customer ratings
+* Competitor proximity
+* Store region
+* Store type
+* Holiday indicators
+
+The dataset is stored in:
+
+```text
+data/business_regression_data.xlsx
+```
+
+# Dependent and Independent Variables
 ## Dependent Variable
 
 The dependent variable (target variable) for the regression analysis is:
