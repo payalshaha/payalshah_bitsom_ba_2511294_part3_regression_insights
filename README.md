@@ -160,3 +160,69 @@ The following variables may require preparation before regression analysis:
 ## Summary
 
 The analysis will use monthly_sales as the dependent variable and evaluate both numerical and categorical predictors. Categorical variables will be converted into dummy variables before running regression models. Variables such as store_id will be excluded because they do not provide predictive business value. The prepared dataset will then be used for simple and multiple regression analysis to identify the strongest drivers of sales performance.
+
+# Dummy Variable Approach
+
+The dataset contains categorical variables that cannot be used directly in regression analysis because regression models require numerical inputs. To incorporate categorical information into the model, dummy variables were created.
+
+## Categorical Variables Identified
+
+The dataset contains the following categorical variables:
+
+* region
+* store_type
+
+For the regression model, dummy variables were created for the **region** variable.
+
+## Region Categories
+
+The region variable contains four categories:
+
+* East
+* North
+* South
+* West
+
+## Reference Category
+
+To avoid the dummy variable trap (perfect multicollinearity), one category must be excluded from the regression model and used as the reference category.
+
+The selected reference category is:
+
+**East**
+
+No dummy variable was created for East.
+
+## Dummy Variables Created
+
+The following dummy variables were generated:
+
+* North_Dummy
+* South_Dummy
+* West_Dummy
+
+The coding scheme is shown below:
+
+| Region | North_Dummy | South_Dummy | West_Dummy |
+| ------ | ----------- | ----------- | ---------- |
+| East   | 0           | 0           | 0          |
+| North  | 1           | 0           | 0          |
+| South  | 0           | 1           | 0          |
+| West   | 0           | 0           | 1          |
+
+## Interpretation
+
+The coefficients of the dummy variables represent the expected difference in monthly sales compared with stores located in the East region while holding all other variables constant.
+
+For example:
+
+* A positive coefficient for North_Dummy indicates that stores in the North region are associated with higher monthly sales than stores in the East region.
+* A negative coefficient indicates lower monthly sales relative to the East region.
+* Similar interpretations apply to South_Dummy and West_Dummy.
+
+## Reason for Using Dummy Variables
+
+Dummy variables allow categorical information to be included in the regression model while maintaining the mathematical requirements of linear regression. Using a reference category prevents redundancy and ensures that the regression coefficients can be interpreted correctly.
+
+The dummy variables were included in the multiple regression model along with numerical predictors such as marketing spend, footfall, inventory availability, and customer rating.
+
