@@ -15,7 +15,7 @@ Negative residuals indicate that actual sales were lower than model predictions.
 
 ---
 
-## Largest Positive Residuals
+## Largest Negative Residuals
 
 | Store ID | Region | Actual Sales | Predicted Sales | Residual |
 |-----------|-----------|-----------|-----------|-----------|
@@ -24,32 +24,6 @@ Negative residuals indicate that actual sales were lower than model predictions.
 | STR-1023 | South | 627171.9   | 757388.6 | 130216.7 |
 | STR-1009 | North | 641865.03  | 762488.8 | 120623.8 |
 | STR-1077 | South | 538376     | 648422.3 | 110046.3 |
-
-### Interpretation
-
-These stores performed substantially better than predicted.
-
-Possible explanations include:
-
-- Exceptional local management
-- Strong local demand
-- Successful promotions not captured in the dataset
-- Unique competitive advantages
-- Seasonal factors not included in the model
-
-The model may be missing variables that explain these unusually strong sales outcomes.
-
----
-
-## Largest Negative Residuals
-
-| Store ID | Region | Actual Sales | Predicted Sales | Residual |
-|-----------|-----------|-----------|-----------|-----------|
-| STR-1028 | East  | 713611.16  | 585781.3| -127829.9 |
-| STR-1026 | East  | 625514.04   |522797.2 | -102716.8 |
-| STR-1051 | East | 787715.51   | 687127.0 | -100588.5 |
-| STR-1073 | East | 813316.71  | 718839.5 | -94477.2 |
-| STR-1064 | South | 799046.94     | 706026.9 | -93019.9 |
 
 ### Interpretation
 
@@ -64,6 +38,32 @@ Possible explanations include:
 - Economic or demographic factors not captured in the model
 
 The model may be overestimating sales potential for these locations.
+
+---
+
+## Largest Positive Residuals
+
+| Store ID | Region | Actual Sales | Predicted Sales | Residual |
+|-----------|-----------|-----------|-----------|-----------|
+| STR-1028 | East  | 713611.16  | 585781.3| -127829.9 |
+| STR-1026 | East  | 625514.04   |522797.2 | -102716.8 |
+| STR-1051 | East | 787715.51   | 687127.0 | -100588.5 |
+| STR-1073 | East | 813316.71  | 718839.5 | -94477.2 |
+| STR-1064 | South | 799046.94     | 706026.9 | -93019.9 |
+
+### Interpretation
+
+These stores performed substantially better than predicted.
+
+Possible explanations include:
+
+- Exceptional local management
+- Strong local demand
+- Successful promotions not captured in the dataset
+- Unique competitive advantages
+- Seasonal factors not included in the model
+
+The model may be missing variables that explain these unusually strong sales outcomes.
 
 ---
 
