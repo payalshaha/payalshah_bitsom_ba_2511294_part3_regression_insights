@@ -174,5 +174,264 @@ The Multiple Regression Model was selected as the final model because:
 
 Therefore, the multiple regression model is the preferred model for understanding and improving monthly sales performance.
 
+# Model Equations
+
+## Purpose
+
+Regression analysis was performed to identify the business factors most strongly associated with monthly sales performance and to support data-driven decision-making.
+
+Three regression models were developed and compared:
+
+1. Simple Regression Model – Marketing Spend
+2. Simple Regression Model – Footfall
+3. Multiple Regression Model
+
+---
+
+# Simple Regression Model 1
+
+## Monthly Sales vs Marketing Spend
+
+### Regression Equation
+
+Monthly Sales = 560,777.35 + 2.13 × Marketing Spend
+
+### Coefficient Explanation
+
+#### Intercept (560,777.35)
+
+The intercept represents the estimated monthly sales when marketing spend is zero.
+
+Although stores rarely operate without marketing activity, the intercept provides the baseline value from which the effect of marketing spend is measured.
+
+#### Marketing Spend Coefficient (2.13)
+
+For every additional ₹1 spent on marketing, monthly sales are expected to increase by approximately ₹2.13.
+
+### Business Interpretation
+
+The model suggests that marketing investment is positively associated with sales performance. Increased marketing activity may help attract customers and generate additional revenue.
+
+---
+
+# Simple Regression Model 2
+
+## Monthly Sales vs Footfall
+
+### Regression Equation
+
+Monthly Sales = 446,410.58 + 35.68 × Footfall
+
+### Coefficient Explanation
+
+#### Intercept (446,410.58)
+
+The intercept represents estimated monthly sales when customer footfall equals zero.
+
+Since stores cannot realistically generate sales without customers, the intercept primarily serves a mathematical function within the regression model.
+
+#### Footfall Coefficient (35.68)
+
+Each additional customer visit is associated with approximately ₹35.68 higher monthly sales.
+
+### Business Interpretation
+
+Footfall is strongly associated with monthly sales. Stores that attract more visitors generally achieve higher revenue levels.
+
+---
+
+# Multiple Regression Model
+
+## Regression Equation
+
+Predicted Monthly Sales =
+
+80,972.67
+
+* 1.2023 × Marketing Spend
+
+* 33.9843 × Footfall
+
+* 2,886.73 × Inventory Availability %
+
+* 11,024.99 × Customer Rating
+
+* 8,667.12 × North_Dummy
+
+* 21,972.42 × South_Dummy
+
+* 17,042.83 × West_Dummy
+
+---
+
+# Coefficient Interpretation
+
+## Intercept (80,972.67)
+
+The intercept represents the estimated monthly sales when all independent variables equal zero.
+
+Because stores do not realistically operate with zero marketing spend, zero customers, and zero inventory availability, the intercept has limited practical business meaning and mainly serves as a baseline value within the equation.
+
+---
+
+## Marketing Spend (1.2023)
+
+For every additional ₹1 invested in marketing, monthly sales are expected to increase by approximately ₹1.20 while holding all other variables constant.
+
+### Business Meaning
+
+Marketing investment contributes positively to sales growth and remains an important driver of store performance.
+
+---
+
+## Footfall (33.9843)
+
+Each additional customer visit is associated with approximately ₹33.98 higher monthly sales while holding all other variables constant.
+
+### Business Meaning
+
+Customer traffic is the strongest sales driver in the model. Increasing store visits is likely to have a significant impact on revenue.
+
+---
+
+## Inventory Availability Percentage (2,886.73)
+
+A one percentage-point increase in inventory availability is associated with approximately ₹2,886.73 higher monthly sales.
+
+### Business Meaning
+
+Stores that maintain better stock availability are more likely to satisfy customer demand and avoid lost sales opportunities.
+
+---
+
+## Customer Rating (11,024.99)
+
+A one-point increase in customer rating is associated with approximately ₹11,024.99 higher monthly sales.
+
+### Business Meaning
+
+Improved customer satisfaction appears to contribute positively to revenue through repeat purchases and stronger customer loyalty.
+
+---
+
+# Dummy Variables
+
+## Why Dummy Variables Were Used
+
+The variable **region** is categorical and cannot be used directly in a regression model.
+
+Dummy variables were created to convert the categories into numerical values that can be analyzed statistically.
+
+---
+
+## Reference Category
+
+The selected reference category is:
+
+**East Region**
+
+No dummy variable was created for East.
+
+All regional comparisons are measured relative to East region stores.
+
+---
+
+## North_Dummy
+
+### Coding
+
+* North = 1
+* Otherwise = 0
+
+### Coefficient
+
+8,667.12
+
+### Interpretation
+
+North region stores are estimated to generate approximately ₹8,667 higher monthly sales than East region stores, holding all other variables constant.
+
+However, this variable was not statistically significant and should be interpreted cautiously.
+
+---
+
+## South_Dummy
+
+### Coding
+
+* South = 1
+* Otherwise = 0
+
+### Coefficient
+
+21,972.42
+
+### Interpretation
+
+South region stores are estimated to generate approximately ₹21,972 higher monthly sales than East region stores, holding all other variables constant.
+
+This relationship was statistically significant.
+
+---
+
+## West_Dummy
+
+### Coding
+
+* West = 1
+* Otherwise = 0
+
+### Coefficient
+
+17,042.83
+
+### Interpretation
+
+West region stores are estimated to generate approximately ₹17,043 higher monthly sales than East region stores, holding all other variables constant.
+
+This relationship was statistically significant.
+
+---
+
+# Final Model Selected
+
+## Selected Model
+
+Multiple Regression Model
+
+---
+
+## Reason for Selection
+
+The multiple regression model was selected as the final model because it provided the strongest explanation of monthly sales performance.
+
+### Advantages
+
+* Highest R-squared value (81.44%)
+* Includes multiple business drivers simultaneously
+* Identifies statistically significant predictors
+* Incorporates regional differences through dummy variables
+* Produces more reliable business insights than simple regression models
+
+### Key Drivers Identified
+
+The strongest factors associated with higher monthly sales were:
+
+1. Footfall
+2. Inventory Availability
+3. Customer Rating
+4. Marketing Spend
+5. South Region
+6. West Region
+
+---
+
+# Conclusion
+
+The final model indicates that monthly sales are influenced by a combination of customer traffic, marketing investment, inventory management, customer satisfaction, and regional factors.
+
+Among all variables, footfall emerged as the strongest predictor of sales performance. Therefore, leadership should prioritize strategies that increase customer visits while maintaining strong inventory availability and customer experience standards.
+
+
 
 The East region serves as the baseline category against which all other regions are compared.
