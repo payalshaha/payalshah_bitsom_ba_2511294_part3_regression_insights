@@ -545,3 +545,154 @@ The most influential and statistically significant factors associated with highe
 
 Based on the regression evidence, leadership should prioritize initiatives that increase customer traffic, maintain high inventory availability, improve customer experience, and optimize marketing investments. Regional performance differences suggest that practices used in South and West stores may provide valuable insights that could be replicated in other regions.
 
+## Model Comparison Summary
+
+| Model                             | R-Squared | Key Finding                                                                          |
+| --------------------------------- | --------- | ------------------------------------------------------------------------------------ |
+| Marketing Spend Simple Regression | 0.167     | Marketing spend has a positive association with sales but explains limited variation |
+| Footfall Simple Regression        | 0.736     | Footfall is a strong predictor of monthly sales                                      |
+| Multiple Regression               | 0.814     | Best overall model with the highest explanatory power                                |
+
+### Significant Variables
+
+The multiple regression model identified the following significant variables:
+
+* marketing_spend
+* footfall
+* inventory_availability_pct
+* customer_rating
+* South_Dummy
+* West_Dummy
+
+### Statistically Weak Variable
+
+* North_Dummy
+
+The North region coefficient was not statistically significant and should be interpreted cautiously.
+
+---
+
+## Final Model Selected
+
+### Selected Model
+
+Multiple Regression Model
+
+### Reason for Selection
+
+The multiple regression model was selected because:
+
+* Highest R-squared value (81.44%)
+* Strong explanatory power
+* Includes multiple business drivers
+* Incorporates regional effects using dummy variables
+* Provides the strongest support for business decision-making
+
+The model explains approximately 81.44% of variation in monthly sales performance.
+
+---
+
+## Business Recommendation
+
+Based on the regression results, leadership should focus on the following priorities:
+
+### 1. Increase Footfall
+
+Footfall was the strongest predictor of sales performance.
+
+Recommended actions:
+
+* Increase local marketing campaigns
+* Run promotional events
+* Improve store visibility
+* Enhance customer acquisition efforts
+
+### 2. Improve Inventory Availability
+
+Maintaining high inventory availability is strongly associated with increased sales.
+
+Recommended actions:
+
+* Improve demand forecasting
+* Reduce stockouts
+* Strengthen inventory planning processes
+
+### 3. Improve Customer Experience
+
+Customer ratings demonstrated a positive association with sales performance.
+
+Recommended actions:
+
+* Improve service quality
+* Increase staff training
+* Enhance store experience
+
+### 4. Optimize Marketing Investments
+
+Marketing spend remains an important sales driver.
+
+Recommended actions:
+
+* Focus on high-return marketing channels
+* Monitor marketing effectiveness
+* Improve campaign targeting
+
+---
+
+## Assumptions and Limitations
+
+### Assumptions
+
+* Relationships between variables are approximately linear.
+* Historical sales patterns are representative of future behavior.
+* Variables included in the model are measured accurately.
+* Independent variables influence sales consistently across stores.
+
+### Limitations
+
+* Regression identifies association rather than causation.
+* External factors such as economic conditions, competition, weather, and local events are not included.
+* Some store-specific factors may not be captured in the dataset.
+* Relationships observed in historical data may change over time.
+* Residual analysis suggests that additional variables may further improve predictive accuracy.
+
+---
+
+## Screenshots Included
+
+The repository includes the following evidence screenshots:
+
+### simple_regression_output.png
+
+Shows:
+
+* Simple regression statistics
+* ANOVA table
+* Coefficient estimates
+
+### multiple_regression_output.png
+
+Shows:
+
+* Multiple regression results
+* R-squared
+* Coefficients
+* P-values
+
+### residuals_preview.png
+
+Shows:
+
+* Actual sales
+* Predicted sales
+* Residual calculations
+
+### model_comparison_preview.png
+
+Shows:
+
+* Model comparison table
+* R-squared comparison
+* Final model selection summary
+
+---
